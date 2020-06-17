@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package jtodo;
+
+option java_package = "com.pojtinger.felix.hdm.seOne.jtodo.backend";
+
+service JTodo { rpc createTodo(NewTodo) returns (Todo); }
+
+message NewTodo {
+  string title = 1;
+  string body = 2;
+}
+
+message Todo {
+  string id = 1;
+  string title = 2;
+  string body = 3;
+}
