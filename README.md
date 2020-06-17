@@ -10,7 +10,7 @@ This project is a simple gRPC service for CRUD actions on todos.
 
 ## Installation
 
-A JAR is available on [GitHub Actions](https://github.com/pojntfx/jtodo-backend/actions).
+A JAR is available on [GitHub Releases](https://github.com/pojntfx/jtodo-backend/releases).
 
 ## License
 
