@@ -13,4 +13,8 @@ public class JTodoCore {
 
         return newTodo;
     }
+
+    public List<Todo> getTodos() {
+        return this.todos;
+    }
 }
