@@ -21,7 +21,6 @@
         <appId>com.pojtinger.felicitas.hdm.seOne.jtodo.backend</appId>
         <appUUID>552ec568-06d9-46c8-b565-60192196aa90</appUUID>
         <appName>JTodo Server</appName>
-        <appPackageName>JTodo-Server</appPackageName>
         <appMaintainer>felicitas@pojtinger.com</appMaintainer>
         <appLicense>AGPL-3.0</appLicense>
         <appCategory>Utility</appCategory>
@@ -110,6 +109,35 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <executable>jpackage</executable>
+                    <arguments>
+                        <argument>--input</argument>
+                        <argument>target</argument>
+                        <argument>--name</argument>
+                        <argument>${appName}</argument>
+                        <argument>--main-jar</argument>
+                        <argument>${project.artifactId}-${project.version}.jar</argument>
+                        <argument>--main-class</argument>
+                        <argument>${mainClass}</argument>
+                        <argument>--dest</argument>
+                        <argument>staging</argument>
+                    </arguments>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
@@ -153,8 +181,6 @@
                                 <!-- Platform specific -->
                                 <argument>--type</argument>
                                 <argument>deb</argument>
-                                <argument>--linux-package-name</argument>
-                                <argument>${appPackageName}</argument>
                                 <argument>--linux-deb-maintainer</argument>
                                 <argument>${appMaintainer}</argument>
                                 <argument>--linux-menu-group</argument>
