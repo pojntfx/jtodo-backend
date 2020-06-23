@@ -11,6 +11,9 @@
         </license>
     </licenses>
 
+    <name>JTodo-Server</name>
+    <description>This project is a simple gRPC service for CRUD actions on todos.</description>
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -20,7 +23,6 @@
 
         <appId>com.pojtinger.felicitas.hdm.seOne.jtodo.backend</appId>
         <appUUID>552ec568-06d9-46c8-b565-60192196aa90</appUUID>
-        <appName>JTodo-Server</appName>
         <appMaintainer>felicitas@pojtinger.com</appMaintainer>
         <appLicense>AGPL-3.0</appLicense>
         <appCategory>Utility</appCategory>
@@ -109,35 +111,6 @@
                     </execution>
                 </executions>
             </plugin>
-
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>3.0.0</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <executable>jpackage</executable>
-                    <arguments>
-                        <argument>--input</argument>
-                        <argument>target</argument>
-                        <argument>--name</argument>
-                        <argument>${appName}</argument>
-                        <argument>--main-jar</argument>
-                        <argument>${project.artifactId}-${project.version}.jar</argument>
-                        <argument>--main-class</argument>
-                        <argument>${mainClass}</argument>
-                        <argument>--dest</argument>
-                        <argument>staging</argument>
-                    </arguments>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 
@@ -170,7 +143,9 @@
                                 <argument>--input</argument>
                                 <argument>target</argument>
                                 <argument>--name</argument>
-                                <argument>${appName}</argument>
+                                <argument>${project.name}</argument>
+                                <argument>--description</argument>
+                                <argument>${project.description}</argument>
                                 <argument>--main-jar</argument>
                                 <argument>${project.artifactId}-${project.version}.jar</argument>
                                 <argument>--main-class</argument>
@@ -199,7 +174,6 @@
             </build>
         </profile>
 
-
         <profile>
             <id>platform-apple</id>
             <activation>
@@ -227,7 +201,9 @@
                                 <argument>--input</argument>
                                 <argument>target</argument>
                                 <argument>--name</argument>
-                                <argument>${appName}</argument>
+                                <argument>${project.name}</argument>
+                                <argument>--description</argument>
+                                <argument>${project.description}</argument>
                                 <argument>--main-jar</argument>
                                 <argument>${project.artifactId}-${project.version}.jar</argument>
                                 <argument>--main-class</argument>
@@ -274,7 +250,9 @@
                                 <argument>--input</argument>
                                 <argument>target</argument>
                                 <argument>--name</argument>
-                                <argument>${appName}</argument>
+                                <argument>${project.name}</argument>
+                                <argument>--description</argument>
+                                <argument>${project.description}</argument>
                                 <argument>--main-jar</argument>
                                 <argument>${project.artifactId}-${project.version}.jar</argument>
                                 <argument>--main-class</argument>
