@@ -1,4 +1,4 @@
-# JTodo Server
+# JTodo-Server
 
 A minimal gRPC backend for JTodo, an example Todo app for Stuttgart Media University SE1.
 
@@ -14,6 +14,6 @@ Universal, Linux, Apple and Microsoft packages are available on [GitHub Releases
 
 ## License
 
-JTodo Server (c) 2020 Felicitas Pojtinger
+JTodo-Server (c) 2020 Felicitas Pojtinger
 
 SPDX-License-Identifier: AGPL-3.0

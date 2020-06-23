@@ -20,7 +20,7 @@
 
         <appId>com.pojtinger.felicitas.hdm.seOne.jtodo.backend</appId>
         <appUUID>552ec568-06d9-46c8-b565-60192196aa90</appUUID>
-        <appName>JTodo Server</appName>
+        <appName>JTodo-Server</appName>
         <appMaintainer>felicitas@pojtinger.com</appMaintainer>
         <appLicense>AGPL-3.0</appLicense>
         <appCategory>Utility</appCategory>
