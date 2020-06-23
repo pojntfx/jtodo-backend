@@ -1,4 +1,4 @@
-# JTodo Backend
+# JTodo Server
 
 A minimal gRPC backend for JTodo, an example Todo app for Stuttgart Media University SE1.
 
@@ -6,7 +6,7 @@ A minimal gRPC backend for JTodo, an example Todo app for Stuttgart Media Univer
 
 ## Overview
 
-This project is a simple gRPC service for CRUD actions on todos.
+This project is a simple gRPC service for CRUD actions on todos. See [JTodo](https://pojntfx.github.io/jtodo-frontend-javafx/) for the app.
 
 ## Installation
 
@@ -14,6 +14,6 @@ Universal, Linux, Apple and Microsoft packages are available on [GitHub Releases
 
 ## License
 
-JTodo Backend (c) 2020 Felicitas Pojtinger
+JTodo Server (c) 2020 Felicitas Pojtinger
 
 SPDX-License-Identifier: AGPL-3.0
