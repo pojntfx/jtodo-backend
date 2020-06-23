@@ -95,4 +95,4 @@ jobs:
           prerelease: true
           automatic_release_tag: unstable-microsoft
           files: |
-            staging/*.exe
+            staging/*.msi
